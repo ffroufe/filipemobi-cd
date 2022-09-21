@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: filipe-finalapp
+  name: filipe-finalapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filipe-finalapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: filipe-finalapp
+    spec:
+      containers:
+      - image: ffroufe/filipe-mobi-webapp:5
+        name: filipe-mobi-webapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
